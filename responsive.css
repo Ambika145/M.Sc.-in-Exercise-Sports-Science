@@ -1,0 +1,949 @@
+/* ==========================================================================
+   Responsive overrides — loads after style.css
+   ========================================================================== */
+
+/* --- Global --- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  padding-left: clamp(12px, 3vw, 16px);
+  padding-right: clamp(12px, 3vw, 16px);
+}
+
+/* --- Hero desktop: info bar always pinned to bottom of viewport --- */
+@media screen and (min-width: 992px) {
+  .hero-section {
+    display: grid !important;
+    grid-template-rows: minmax(0, 1fr) auto !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    --hero-form-bar-gap: clamp(0.75rem, 2.2vh, 2rem);
+    --hero-image-info-gap: 0;
+    --hero-img-max: min(74vh, 46rem);
+  }
+
+  .hero-section .hero-container {
+    grid-row: 1 !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .hero-main {
+    align-items: end !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .hero-center {
+    align-self: end !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    min-height: 0 !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    line-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .hero-student-stack {
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  .hero-student-img {
+    max-height: min(100%, var(--hero-img-max)) !important;
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: bottom center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    display: block !important;
+  }
+
+  .hero-left {
+    align-self: center !important;
+    justify-content: center !important;
+  }
+
+  .hero-right {
+    align-self: stretch !important;
+    margin-top: 0 !important;
+    margin-bottom: var(--hero-form-bar-gap) !important;
+    max-height: 100% !important;
+  }
+
+  .hero-info-bar {
+    grid-row: 2 !important;
+    margin-top: var(--hero-image-info-gap) !important;
+    flex: none !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 5 !important;
+  }
+}
+
+/* 125% Windows scaling / 110% browser zoom — shorter effective viewport */
+@media screen and (min-width: 992px) and (max-height: 900px) {
+  .hero-section {
+    --hero-form-bar-gap: 1.75rem;
+  }
+}
+
+/* 150% Windows scaling / 90% browser zoom edge cases */
+@media screen and (min-width: 992px) and (max-height: 760px) {
+  .hero-section {
+    --hero-form-bar-gap: 1.5rem;
+  }
+}
+
+/* --- Hero: tablet & below --- */
+@media screen and (max-width: 991px) {
+  .hero-section {
+    min-height: auto !important;
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .hero-info-bar {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    flex: 0 0 auto !important;
+    order: 99;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    position: relative !important;
+    z-index: 5 !important;
+  }
+
+  .hero-section .hero-container {
+    overflow: visible !important;
+    padding-left: clamp(12px, 3vw, 20px);
+    padding-right: clamp(12px, 3vw, 20px);
+  }
+
+  .hero-main {
+    gap: clamp(14px, 3vw, 24px);
+    padding-bottom: 1.25rem;
+  }
+
+  .hero-left {
+    order: 1;
+    width: 100%;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  .hero-center {
+    order: 2;
+    transform: none !important;
+    margin-bottom: 0 !important;
+    max-width: min(32rem, 100%);
+  }
+
+  .hero-student-img {
+    max-height: clamp(14rem, 48vw, 20rem) !important;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .hero-right {
+    order: 3;
+    width: min(100%, 30rem) !important;
+    max-width: min(100%, 30rem) !important;
+    margin: 0 auto clamp(1.25rem, 4vw, 2rem) !important;
+    padding: 0;
+  }
+
+  .hero-enquiry-card {
+    min-height: 18rem !important;
+    max-height: min(32rem, 78vh) !important;
+  }
+
+  .hero-npf-scroll {
+    max-height: min(360px, 54vh) !important;
+  }
+
+  .hero-description {
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-info-inner {
+    padding-left: clamp(8px, 2vw, 16px);
+    padding-right: clamp(8px, 2vw, 16px);
+  }
+}
+
+/* --- Hero: small tablet / large phone --- */
+@media screen and (max-width: 767px) {
+  .hero-header {
+    padding-top: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .hero-section .header-logos {
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 5.5vw, 1.95rem) !important;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.78rem, 2.9vw, 0.92rem) !important;
+    letter-spacing: 0.03em;
+  }
+
+  .hero-description {
+    font-size: clamp(0.8rem, 2.8vw, 0.92rem) !important;
+    line-height: 1.55;
+  }
+
+  .hero-right {
+    width: min(100%, 24rem) !important;
+    max-width: min(100%, 24rem) !important;
+  }
+
+  .hero-enquiry-card {
+    min-height: 17rem !important;
+    max-height: min(30rem, 72vh) !important;
+  }
+
+  .hero-info-item {
+    flex: 1 1 50% !important;
+    font-size: clamp(0.7rem, 2.6vw, 0.82rem) !important;
+    padding: 0.45rem 0.35rem !important;
+    line-height: 1.35;
+  }
+
+  .hero-info-item:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.22) !important;
+  }
+
+  .hero-info-item:nth-child(even) {
+    border-right: none !important;
+  }
+
+  .hero-info-item:nth-child(5) {
+    flex: 1 1 100% !important;
+    border-right: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .features-slider-wrap,
+  .faculty-slider-wrap,
+  .skills-slider-wrap {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .programme-overview-inner {
+    gap: 24px;
+  }
+
+  .why-choose-grid {
+    max-width: 100%;
+  }
+}
+
+/* --- Hero: small phones --- */
+@media screen and (max-width: 480px) {
+  .hero-section .hero-container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.28rem, 6.2vw, 1.55rem) !important;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.68rem, 3.2vw, 0.78rem) !important;
+  }
+
+  .hero-description {
+    font-size: clamp(0.76rem, 3.4vw, 0.86rem) !important;
+  }
+
+  .hero-student-img {
+    max-height: clamp(12rem, 56vw, 17rem) !important;
+  }
+
+  .hero-right {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hero-enquiry-card {
+    min-height: 15rem !important;
+    max-height: min(26rem, 68vh) !important;
+    padding: 1.1rem 0.9rem 0.9rem !important;
+    border-radius: 1rem;
+  }
+
+  .hero-enquiry-card h3 {
+    font-size: 1.05rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .hero-npf-scroll {
+    max-height: min(280px, 46vh) !important;
+  }
+
+  .hero-info-bar {
+    padding: 0.65rem 0.5rem !important;
+  }
+
+  .hero-info-item {
+    flex: 1 1 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    font-size: 0.8rem !important;
+    padding: 0.5rem 0.35rem !important;
+  }
+
+  .hero-info-item:last-child {
+    border-bottom: none !important;
+  }
+
+  .features-slider-wrap,
+  .faculty-slider-wrap {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .features-arrow,
+  .faculty-arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+}
+
+/* --- Hero: laptop / small desktop --- */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero-main {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.15fr) minmax(0, 1fr);
+    column-gap: 0.5rem;
+  }
+
+  .hero-right {
+    max-width: 28rem !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.65rem, 2.2vw, 2rem) !important;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.82rem, 1vw, 0.92rem) !important;
+  }
+
+  .hero-enquiry-card {
+    max-height: 100% !important;
+    min-height: 0 !important;
+  }
+}
+
+/* Short desktop viewports at 125%/150% scale — the hero is pinned to the
+   viewport (fit model); tighten the form gap only. The image and form flex to
+   fit the remaining space, and text/logos are compressed by the inline
+   short-viewport rules in index.html so nothing is clipped. */
+@media screen and (min-width: 992px) and (max-height: 880px) {
+  .hero-section {
+    --hero-form-bar-gap: clamp(0.75rem, 2vh, 1.25rem);
+  }
+
+  .hero-info-bar {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* --- Tuition table scroll on narrow screens --- */
+@media screen and (max-width: 575px) {
+  .tuition-table-wrap {
+    overflow: visible !important;
+    -webkit-overflow-scrolling: auto;
+  }
+
+  .tuition-table {
+    min-width: 0 !important;
+    width: 100%;
+  }
+
+  .programme-for-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 25rem;
+    margin: 0 auto;
+  }
+
+  .career-pathways-cards {
+    grid-template-columns: 1fr !important;
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
+  .know-more-cta {
+    width: 100%;
+    max-width: 20rem;
+  }
+}
+
+/* --- Landscape phones --- */
+@media screen and (max-height: 520px) and (orientation: landscape) and (max-width: 900px) {
+  .hero-main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .hero-left {
+    flex: 1 1 45%;
+    order: 1;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .hero-center {
+    flex: 0 1 28%;
+    order: 2;
+    max-width: 12rem;
+  }
+
+  .hero-student-img {
+    max-height: 11rem !important;
+  }
+
+  .hero-right {
+    flex: 1 1 40%;
+    order: 3;
+    max-width: 18rem !important;
+  }
+
+  .hero-enquiry-card {
+    min-height: 14rem !important;
+    max-height: 18rem !important;
+  }
+
+  .hero-npf-scroll {
+    max-height: 12rem !important;
+  }
+}
+
+/* ==========================================================================
+   Mobile-only section fixes (phones ≤767px) — desktop/tablet unchanged
+   ========================================================================== */
+
+.features-dots,
+.recognition-dots {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .section-global {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* ---------- 1. Enquire Now — full-width horizontal band, no overflow ---------- */
+  .enquire-section {
+    padding: 36px 0 44px !important;
+    overflow-x: hidden;
+  }
+
+  .enquire-section .enquire-container {
+    padding-left: 14px;
+    padding-right: 14px;
+    max-width: 100%;
+  }
+
+  .enquire-heading {
+    font-size: clamp(1.55rem, 6vw, 1.85rem) !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .enquire-section .enquire-card {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    border-radius: 22px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .enquire-form-panel {
+    flex: 1 1 58% !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    padding: 1rem 0.85rem 0.9rem !important;
+    box-sizing: border-box;
+  }
+
+  .enquire-info-panel {
+    flex: 1 1 42% !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    padding: 1rem 0.85rem !important;
+    align-items: center !important;
+    box-sizing: border-box;
+  }
+
+  .enquire-npf-scroll {
+    max-height: min(360px, 58vh) !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+
+  .enquire-form-panel .npf_wgts,
+  .enquire-form-panel .npf_wgts iframe,
+  .enquire-section .npf_wgts,
+  .enquire-section .npf_wgts iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 280px !important;
+  }
+
+  .enquire-info-panel .info-section h2 {
+    font-size: clamp(0.95rem, 3.6vw, 1.15rem) !important;
+    margin-bottom: 0.55rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .enquire-info-panel .info-text {
+    font-size: clamp(0.72rem, 2.8vw, 0.85rem) !important;
+    line-height: 1.45 !important;
+  }
+
+  /* ---------- 2. What's in it for you — 1 card per swipe ---------- */
+  .features-section {
+    padding: 40px 0 52px !important;
+    overflow: hidden;
+  }
+
+  .features-slider-wrap {
+    padding: 0 40px !important;
+  }
+
+  .features-slider-viewport {
+    display: flex !important;
+    gap: 0 !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 0;
+  }
+
+  .features-slide {
+    display: contents !important;
+  }
+
+  .features-section .feature-card {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: min(420px, 72vw) !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+    box-sizing: border-box;
+  }
+
+  .features-dots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .features-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    background: rgba(26, 35, 126, 0.28);
+    cursor: pointer;
+  }
+
+  .features-dot.active {
+    background: #5e17eb;
+    transform: scale(1.15);
+  }
+
+  /* ---------- 3. Recognitions — 1 card + pagination dots ---------- */
+  .recognition-section {
+    min-height: auto !important;
+    padding: 24px 0 36px !important;
+    overflow: hidden;
+  }
+
+  .recognition-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .recognition-title {
+    font-size: clamp(1.45rem, 6vw, 1.85rem) !important;
+    margin-bottom: 16px !important;
+  }
+
+  .recognition-grid {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px !important;
+  }
+
+  .recognition-grid .rec-card,
+  .recognition-grid .rec-card-small,
+  .recognition-grid .rec-card-main {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: min(340px, 78vw) !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+    box-sizing: border-box;
+    margin: 0 !important;
+  }
+
+  .recognition-dots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .recognition-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    background: rgba(26, 35, 126, 0.28);
+    cursor: pointer;
+  }
+
+  .recognition-dot.active {
+    background: #5e17eb;
+    transform: scale(1.15);
+  }
+
+  /* ---------- 4. Fees / Eligibility — no horizontal scroll ---------- */
+  .tuition-panel {
+    padding: 28px 12px 28px !important;
+    min-height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    overflow-x: hidden !important;
+  }
+
+  .tuition-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .tuition-tabs {
+    flex-direction: column !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    border-radius: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .tuition-tab {
+    width: 100% !important;
+    border-radius: 16px !important;
+    font-size: 1rem !important;
+    padding: 12px 14px !important;
+  }
+
+  .tuition-table-wrap {
+    overflow: visible !important;
+    overflow-x: hidden !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+  }
+
+  .tuition-table {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    border-collapse: collapse;
+  }
+
+  .tuition-table thead {
+    display: none !important;
+  }
+
+  .tuition-table tbody {
+    display: block !important;
+    width: 100%;
+  }
+
+  .tuition-table tr {
+    display: block !important;
+    width: 100%;
+    padding: 14px 14px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+    box-sizing: border-box;
+  }
+
+  .tuition-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .tuition-table td {
+    display: block !important;
+    width: 100% !important;
+    border: none !important;
+    padding: 4px 0 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+    word-break: break-word;
+  }
+
+  .tuition-table td:first-child {
+    font-weight: 700;
+    color: #ffe66d !important;
+    font-size: 1rem !important;
+    margin-bottom: 2px;
+  }
+
+  .tuition-table td:nth-child(2)::before {
+    content: "Amount: ";
+    font-weight: 600;
+    opacity: 0.9;
+  }
+
+  .tuition-table td:nth-child(3)::before {
+    content: "Due: ";
+    font-weight: 600;
+    opacity: 0.9;
+  }
+
+  .tuition-eligibility-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .tuition-eligibility-heading {
+    font-size: 1.35rem !important;
+  }
+
+  .tuition-eligibility-label,
+  .tuition-step-title,
+  .tuition-eligibility-desc,
+  .tuition-step-desc,
+  .tuition-eligibility-intro,
+  .tuition-eligibility-highlight {
+    font-size: 0.95rem !important;
+    word-break: break-word;
+  }
+
+  /* ---------- 5. Faculty — one full-width card ---------- */
+  .faculty-slider-wrap {
+    padding: 0 42px !important;
+  }
+
+  .faculty-track {
+    gap: 0 !important;
+    scroll-snap-type: x mandatory !important;
+  }
+
+  .faculty-member {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+    box-sizing: border-box;
+    padding: 0 4px;
+  }
+
+  .faculty-photo-frame {
+    width: min(260px, 78%) !important;
+    max-width: min(260px, 78%) !important;
+  }
+
+  .faculty-photo {
+    max-width: 100% !important;
+  }
+
+  .faculty-arrow {
+    top: 50% !important;
+    transform: translateY(-70%) !important;
+  }
+
+  /* ---------- 6. Programme Overview — heading → images → content → CTA ---------- */
+  .programme-overview-section {
+    padding: 48px 0 40px !important;
+    overflow: hidden;
+  }
+
+  .programme-overview-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .programme-overview-content,
+  .programme-overview-media,
+  .programme-overview-side {
+    display: contents !important;
+  }
+
+  .programme-overview-heading {
+    order: 1 !important;
+    font-size: clamp(1.55rem, 6.2vw, 1.85rem) !important;
+    margin: 0 0 4px !important;
+  }
+
+  .programme-overview-campus {
+    order: 2 !important;
+    margin: 0 !important;
+  }
+
+  .programme-overview-finance {
+    order: 3 !important;
+    margin: 0 !important;
+  }
+
+  .programme-overview-texts {
+    order: 4 !important;
+  }
+
+  .programme-learn-more-btn {
+    order: 5 !important;
+    min-height: 64px !important;
+    font-size: 1.1rem !important;
+    margin-top: 4px;
+  }
+
+  .programme-overview-campus .programme-overview-img,
+  .programme-overview-finance .programme-overview-img {
+    width: 100% !important;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 10 !important;
+    object-fit: cover;
+  }
+
+  .programme-overview-text {
+    font-size: 0.95rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .programme-overview-text:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .enquire-section .enquire-card {
+    flex-direction: column !important;
+  }
+
+  .enquire-form-panel,
+  .enquire-info-panel {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+  }
+
+  .enquire-info-panel {
+    order: -1;
+    padding: 1.15rem 1rem !important;
+  }
+
+  .enquire-form-panel {
+    padding: 1.1rem 1rem 1rem !important;
+  }
+
+  .enquire-npf-scroll {
+    max-height: min(420px, 62vh) !important;
+  }
+
+  .features-slider-wrap,
+  .faculty-slider-wrap {
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+  }
+
+  .features-section .feature-card {
+    height: min(380px, 88vw) !important;
+  }
+
+  .recognition-grid .rec-card,
+  .recognition-grid .rec-card-small,
+  .recognition-grid .rec-card-main {
+    height: min(300px, 82vw) !important;
+  }
+}
