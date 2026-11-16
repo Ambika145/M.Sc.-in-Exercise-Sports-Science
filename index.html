@@ -31,19 +31,11 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>M.Sc. in Exercise &amp; Sports Science - O.P. Jindal Global University</title>
-    <meta name="description" content="M.Sc. in Exercise &amp; Sports Science at O.P. Jindal Global University. A 12-month hybrid postgraduate programme covering exercise science, biomechanics, sports nutrition, and performance analysis.">
+    <meta name="description" content="M.Sc. in Exercise &amp; Sports Science at O.P. Jindal Global University. A 12-month online postgraduate programme with optional campus immersion, covering exercise science, biomechanics, sports nutrition, and performance analysis.">
     <link rel="shortcut icon" type="image/x-icon" href="https://jguonline.edu.in/public/frontend/assets/img/favicon.ico">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    
-        <link rel="stylesheet" href="style.css?v=202608121630">
-        <link rel="stylesheet" href="responsive.css?v=202607311430">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=feedback-1011">
 
     <!-- Critical: hero layout; enquiry form scrolls inside card only -->
     <style>
@@ -59,7 +51,7 @@
       .hero-info-bar {
         background: linear-gradient(90deg, #1a237e 0%, #4527a0 32%, #7b1fa2 62%, #00acc1 100%) !important;
         position: relative !important;
-        z-index: 5 !important;
+        z-index: 2 !important;
         flex: none !important;
         flex-shrink: 0 !important;
         display: block !important;
@@ -67,6 +59,32 @@
         opacity: 1 !important;
         width: 100% !important;
         max-width: 100% !important;
+      }
+
+      .hero-bottom-bars {
+        position: relative !important;
+        z-index: 2 !important;
+      }
+
+      .hero-section .hero-container {
+        position: relative !important;
+        z-index: 3 !important;
+      }
+
+      .hero-scholarship-bar {
+        background: #3f2a8c !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        padding: 0.55rem 1rem !important;
+      }
+
+      .hero-scholarship-text {
+        margin: 0 !important;
+        color: #fff !important;
+        font-size: clamp(0.78rem, 2.8vw, 0.95rem) !important;
+        font-weight: 600 !important;
+        line-height: 1.4 !important;
       }
 
       .features-section {
@@ -78,7 +96,7 @@
         clear: both;
       }
 
-      /* Hero button + logos — inline so changes show even when CSS is cached */
+      /* Hero button + logos � inline so changes show even when CSS is cached */
       .hero-section .header-logo-jgu {
         height: 5.75rem !important;
         max-height: 5.75rem !important;
@@ -96,6 +114,7 @@
         visibility: visible !important;
         opacity: 1 !important;
         margin-top: 1.25rem !important;
+        margin-bottom: 0.75rem !important;
         padding: 0.9rem 2.85rem !important;
         background-color: #ffffff !important;
         background-image:
@@ -114,13 +133,16 @@
         box-shadow: 0 6px 18px rgba(74, 20, 140, 0.16) !important;
         flex-shrink: 0 !important;
         position: relative !important;
-        z-index: 8 !important;
+        z-index: 12 !important;
         align-self: flex-start !important;
         cursor: pointer !important;
       }
 
       .hero-section .hero-title {
         font-size: clamp(2rem, 3.4vw, 2.85rem) !important;
+        line-height: 1.2 !important;
+        overflow: visible !important;
+        padding-top: 0.12em !important;
       }
 
       .hero-section .hero-subtitle {
@@ -130,12 +152,6 @@
 
       .hero-section .hero-subtitle-line {
         display: block !important;
-        white-space: nowrap !important;
-      }
-
-      .hero-section .hero-description-line {
-        display: block !important;
-        white-space: nowrap !important;
       }
 
       .hero-section .hero-right {
@@ -169,7 +185,10 @@
         .hero-section {
           min-height: auto !important;
           max-height: none !important;
-          overflow: visible !important;
+          overflow-x: clip !important;
+          overflow-y: visible !important;
+          width: 100% !important;
+          max-width: 100% !important;
         }
 
         .hero-section .header-logo-jgu,
@@ -208,7 +227,7 @@
         /* SCALE-INVARIANT HERO.
            Everything is sized in vh (bounded by clamp) so the layout occupies the
            same physical fraction of the screen at 100% / 125% / 150% Windows
-           scaling — scaling only remaps CSS px of one physical screen, and vh
+           scaling � scaling only remaps CSS px of one physical screen, and vh
            tracks that physical screen. The hero is pinned to exactly one viewport
            with the info bar on the bottom grid row, so it is always fully visible
            and nothing crops. */
@@ -247,8 +266,8 @@
         }
 
         .hero-section .header-logo-jgu {
-          height: clamp(4.6rem, 14vh, 9rem) !important;
-          max-height: clamp(4.6rem, 14vh, 9rem) !important;
+          height: clamp(4.2rem, 9.5vh, 6rem) !important;
+          max-height: clamp(4.2rem, 9.5vh, 6rem) !important;
           width: auto !important;
         }
 
@@ -258,7 +277,7 @@
           width: auto !important;
         }
 
-        .hero-main {
+        .hero-section .hero-main {
           flex: 1 1 auto !important;
           min-height: 0 !important;
           max-height: 100% !important;
@@ -266,18 +285,36 @@
           align-items: end !important;
           padding-bottom: 0 !important;
           margin-bottom: 0 !important;
+          box-sizing: border-box !important;
         }
 
         .hero-left {
-          overflow: hidden !important;
+          overflow: visible !important;
           align-self: center !important;
           justify-content: center !important;
           min-height: 0 !important;
+          margin-top: 0 !important;
+          padding-top: 0.35rem !important;
+          padding-bottom: 0.35rem !important;
+          max-height: 100% !important;
+          box-sizing: border-box !important;
+          position: relative !important;
+          z-index: 4 !important;
+        }
+
+        .hero-left .btn-apply-now,
+        .hero-section .btn-apply-now {
+          margin-bottom: 1rem !important;
+          z-index: 12 !important;
+          position: relative !important;
         }
 
         .hero-section .hero-title {
-          font-size: clamp(2rem, 6.6vh, 3.9rem) !important;
-          line-height: 1.12 !important;
+          font-size: clamp(2.1rem, min(5.6vh, 0.6rem + 2.5vw), 3.25rem) !important;
+          line-height: 1.22 !important;
+          overflow: visible !important;
+          padding-top: 0.32em !important;
+          margin-top: 0 !important;
         }
 
         .hero-section .hero-title-rule {
@@ -285,7 +322,7 @@
         }
 
         .hero-section .hero-subtitle {
-          font-size: clamp(1rem, 2.9vh, 1.65rem) !important;
+          font-size: clamp(1.1rem, min(3.1vh, 0.5rem + 1.15vw), 1.7rem) !important;
           margin-top: clamp(0.75rem, 2.4vh, 1.55rem) !important;
           line-height: 1.4 !important;
         }
@@ -318,7 +355,8 @@
         }
 
         .hero-section .hero-info-item {
-          font-size: clamp(1rem, 2.6vh, 1.45rem) !important;
+          font-size: clamp(1.2rem, min(3.1vh, 0.75rem + 1.1vw), 1.65rem) !important;
+          font-weight: 800 !important;
         }
 
         .hero-center {
@@ -343,7 +381,7 @@
         }
 
         .hero-student-img {
-          max-height: min(100%, var(--hero-img-max)) !important;
+          max-height: 100% !important;
           max-width: 100% !important;
           width: auto !important;
           height: auto !important;
@@ -397,7 +435,76 @@
         }
       }
 
-      /* 150% Windows scaling only (very short viewport ≈627px). 100% (~940px) and
+      /* Short laptop viewports: tighten spacing only � keep type readable at 100% */
+      @media screen and (min-width: 992px) and (max-height: 800px) {
+        .hero-section {
+          --hero-form-bar-gap: clamp(0.5rem, 1.8vh, 1.25rem) !important;
+        }
+
+        .hero-section .hero-container {
+          padding-top: clamp(0.3rem, 1vh, 0.6rem) !important;
+        }
+
+        .hero-section .hero-header {
+          padding-bottom: 0.15rem !important;
+        }
+
+        .hero-section .header-logo-jgu {
+          height: clamp(3.2rem, 8vh, 4.4rem) !important;
+          max-height: clamp(3.2rem, 8vh, 4.4rem) !important;
+        }
+
+        .hero-section .header-logo-jsbf {
+          height: clamp(3.6rem, 11vh, 5.2rem) !important;
+          max-height: clamp(3.6rem, 11vh, 5.2rem) !important;
+        }
+
+        .hero-left {
+          padding-top: 0.15rem !important;
+          padding-bottom: 0.15rem !important;
+        }
+
+        .hero-section .hero-title {
+          font-size: clamp(1.95rem, min(5.5vh, 0.55rem + 2.45vw), 3.1rem) !important;
+          line-height: 1.18 !important;
+          padding-top: 0.1em !important;
+        }
+
+        .hero-section .hero-title-rule {
+          margin-top: clamp(0.35rem, 1.15vh, 0.7rem) !important;
+        }
+
+        .hero-section .hero-subtitle {
+          font-size: clamp(1.05rem, min(2.85vh, 0.45rem + 1.05vw), 1.5rem) !important;
+          margin-top: clamp(0.5rem, 1.6vh, 1rem) !important;
+          line-height: 1.32 !important;
+        }
+
+        .hero-section .hero-description {
+          font-size: clamp(0.98rem, min(2.5vh, 0.4rem + 0.9vw), 1.3rem) !important;
+          margin-top: clamp(0.35rem, 1.15vh, 0.7rem) !important;
+          line-height: 1.4 !important;
+        }
+
+        .hero-left .btn-apply-now,
+        .hero-section .btn-apply-now {
+          margin-top: clamp(0.6rem, 1.8vh, 1.1rem) !important;
+          margin-bottom: 0.35rem !important;
+          padding: clamp(0.65rem, 1.7vh, 1rem) clamp(2.1rem, 3.4vh, 3rem) !important;
+          font-size: clamp(1rem, min(2.45vh, 0.45rem + 0.8vw), 1.3rem) !important;
+        }
+
+        .hero-info-bar {
+          padding: clamp(0.7rem, 1.9vh, 1.2rem) 0 !important;
+        }
+
+        .hero-section .hero-info-item {
+          font-size: clamp(1.15rem, min(3vh, 0.7rem + 1.05vw), 1.5rem) !important;
+          font-weight: 800 !important;
+        }
+      }
+
+      /* 150% Windows scaling only (very short viewport �627px). 100% (~940px) and
          125% (~752px) are ABOVE this breakpoint and stay exactly as they are.
          Here we scale the hero down just enough that the whole left column
          (heading + text + button) and the info bar fit without clipping. */
@@ -405,7 +512,7 @@
         .hero-section {
           --hero-form-bar-gap: clamp(0.5rem, 1.6vh, 1rem) !important;
           --hero-img-max: min(76vh, 30rem) !important;
-          /* Form is taller than the (shrunk) card → the card's scroll area shows
+          /* Form is taller than the (shrunk) card ? the card's scroll area shows
              its own scrollbar so the whole form incl. SUBMIT is reachable. */
           --hero-form-iframe-h: 32rem !important;
         }
@@ -425,8 +532,10 @@
         }
 
         .hero-section .hero-title {
-          font-size: clamp(1.35rem, 4.5vh, 2rem) !important;
-          line-height: 1.08 !important;
+          font-size: clamp(1.55rem, min(4.8vh, 0.45rem + 2vw), 2.25rem) !important;
+          line-height: 1.2 !important;
+          overflow: visible !important;
+          padding-top: 0.12em !important;
         }
 
         .hero-section .hero-title-rule {
@@ -434,7 +543,7 @@
         }
 
         .hero-section .hero-subtitle {
-          font-size: clamp(0.78rem, 2vh, 0.98rem) !important;
+          font-size: clamp(0.9rem, min(2.4vh, 0.35rem + 0.95vw), 1.15rem) !important;
           margin-top: clamp(0.4rem, 1.3vh, 0.7rem) !important;
           line-height: 1.32 !important;
         }
@@ -452,7 +561,8 @@
         }
 
         .hero-section .hero-info-item {
-          font-size: clamp(0.82rem, 2.1vh, 1.05rem) !important;
+          font-size: clamp(0.95rem, min(2.4vh, 0.5rem + 0.9vw), 1.2rem) !important;
+          font-weight: 800 !important;
         }
 
         .hero-section .hero-enquiry-card h3 {
@@ -461,7 +571,7 @@
         }
 
         /* Enquiry card fits the viewport; the form scrolls inside it, and the
-           card keeps its rounded corners (incl. the bottom) — the scroll area is
+           card keeps its rounded corners (incl. the bottom) � the scroll area is
            inset by padding and its bottom corners are rounded so the tall iframe
            never squares off the card edge. */
         .hero-section .hero-right {
@@ -494,6 +604,22 @@
           min-height: 32rem !important;
         }
       }
+
+          /* ESS feedback-1011: tagline flows naturally; info bar stays inside the hero at 100% zoom */
+      .hero-section .hero-subtitle-line {
+        display: inline !important;
+      }
+
+      @media screen and (min-width: 992px) {
+        .hero-section .hero-info-item {
+          font-size: clamp(0.88rem, min(2.1vh, 1.2vw), 1.2rem) !important;
+          line-height: 1.3 !important;
+        }
+
+        .hero-section .hero-info-item strong {
+          display: block;
+        }
+      }
     </style>
 </head>
 <body>
@@ -514,7 +640,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="hero-left">
         <h1 class="hero-title">
-          <span class="hero-title-line hero-title-base">M.Sc. in</span>
+          <span class="hero-title-line">
+            <span class="hero-title-base">M.Sc. in </span>
+          </span>
           <span class="hero-title-gradient">
             <span class="hero-title-line">Exercise &amp;</span>
             <span class="hero-title-line">Sports Science</span>
@@ -525,11 +653,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="hero-subtitle-line">TURN YOUR PASSION FOR SPORTS</span>
           <span class="hero-subtitle-line">AND FITNESS INTO SCIENTIFIC EXPERTISE.</span>
         </p>
-        <p class="hero-description">
-          <span class="hero-description-line">Explore exercise science, biomechanics,</span>
-          <span class="hero-description-line">sports nutrition, and performance analysis.</span>
-          <span class="hero-description-line">Understand human performance through evidence-based practice and science.</span>
-        </p>
+        <p class="hero-description">Explore exercise science, biomechanics, sports nutrition, and performance analysis. Understand human performance through evidence-based practice and science.</p>
         <button type="button" class="npfWidgetButton npfWidget-86a9cceff1e5a85bf6f787455b7997df hero-npf-trigger" tabindex="-1" aria-hidden="true">Apply</button>
         <a href="#" class="btn-apply-now" id="heroApplyNowBtn" role="button">APPLY NOW</a>
       </div>
@@ -551,30 +675,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <div class="hero-info-bar">
-    <div class="hero-info-inner">
-      <div class="hero-info-item">
-        <strong>Postgraduate Degree</strong>
-      </div>
-      <div class="hero-info-item">
-        <strong>Duration: 12 Months</strong>
-      </div>
-      <div class="hero-info-item">
-        <strong>Hybrid Learning Model</strong>
-      </div>
-      <div class="hero-info-item">
-        <strong>Credits: 60</strong>
-      </div>
-      <div class="hero-info-item">
-        <strong>Optional Campus Immersion Available</strong>
+  <div class="hero-bottom-bars">
+    <div class="hero-info-bar">
+      <div class="hero-info-inner">
+        <div class="hero-info-item">
+          <strong>Postgraduate Degree</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Duration: 12 Months</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Mode: Online</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Credits: 60</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Batch Starts: March 2027</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Optional Campus Immersion</strong>
+        </div>
       </div>
     </div>
   </div>
-</section>
-
-<section class="scholarship-bar" aria-label="Scholarship information">
-  <div class="scholarship-bar-line" aria-hidden="true"></div>
-  <p class="scholarship-bar-text"></p>
 </section>
 
     <section class="features-section section-global">
@@ -587,45 +711,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="features-slider-viewport" id="featuresSlider">
                         <div class="features-slide">
                             <div class="feature-card">
-                                <img src="assets/feature-finance-ai-integration.png" alt="Intensive 1-year programme" class="card-img">
+                                <img src="assets/ess-feature-1.jpg" alt="Intensive 1-year programme" class="card-img">
                                 <div class="card-overlay">
                                     <h3 class="card-title">Intensive 1-Year Programme</h3>
                                     <p class="card-text">Complete your postgraduate degree through a focused four-term learning structure.</p>
                                 </div>
                             </div>
                             <div class="feature-card">
-                                <img src="assets/feature-future-ready-curriculum.png" alt="Explore human performance" class="card-img">
+                                <img src="assets/ess-feature-2.jpg" alt="Explore human performance" class="card-img">
                                 <div class="card-overlay">
                                     <h3 class="card-title">Explore Human Performance</h3>
                                     <p class="card-text">Build knowledge across exercise science, biomechanics, sports nutrition, and performance analysis.</p>
                                 </div>
                             </div>
                             <div class="feature-card">
-                                <img src="assets/feature-hands-on-learning.png" alt="Learn online, apply on campus" class="card-img">
+                                <img src="assets/ess-feature-3.jpg" alt="Learning online with optional campus immersion" class="card-img">
                                 <div class="card-overlay">
-                                    <h3 class="card-title">Learn Online, Apply On Campus</h3>
-                                    <p class="card-text">Combine asynchronous online learning with practical on-campus exposure.</p>
+                                    <h3 class="card-title">Learn Online, Immerse On Campus</h3>
+                                    <p class="card-text">Study through asynchronous online learning, with an optional structured campus visit for hands-on exposure.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="features-slide">
                             <div class="feature-card">
-                                <img src="assets/feature-industry-tools-exposure.png" alt="Train with real facilities" class="card-img">
+                                <img src="assets/ess-feature-4.jpg" alt="Train with real facilities" class="card-img">
                                 <div class="card-overlay">
                                     <h3 class="card-title">Train With Real Facilities</h3>
                                     <p class="card-text">Gain exposure to anatomy, physiology, motion analysis, and weight-training facilities.</p>
                                 </div>
                             </div>
                             <div class="feature-card">
-                                <img src="assets/feature-interdisciplinary-approach.png" alt="Experience performance analysis" class="card-img">
+                                <img src="assets/ess-feature-5.jpg" alt="Experience performance analysis" class="card-img">
                                 <div class="card-overlay">
                                     <h3 class="card-title">Experience Performance Analysis</h3>
                                     <p class="card-text">Use speed and running tracks and video analysis labs to connect learning with practical training.</p>
                                 </div>
                             </div>
                             <div class="feature-card">
-                                <img src="assets/feature-flexible-online-learning.png" alt="Research meets practice" class="card-img">
+                                <img src="assets/ess-feature-6.jpg" alt="Research meets practice" class="card-img">
                                 <div class="card-overlay">
                                     <h3 class="card-title">Research Meets Practice</h3>
                                     <p class="card-text">Work on research projects, case studies, and applied assessments focused on real-world sports and exercise challenges.</p>
@@ -670,7 +794,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="programme-learn-more-arrow" aria-hidden="true">&#8592;</span>
           </a>
           <figure class="programme-overview-finance">
-            <img src="assets/programme-ai-hand.png" alt="Exercise and sports science visual" class="programme-overview-img">
+            <img src="assets/ess-programme-overview.jpg" alt="Athlete sprinting on a track while a coach reviews performance data on a tablet" class="programme-overview-img">
           </figure>
         </div>
       </div>
@@ -688,31 +812,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="skills-slide skills-slide--three">
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-financial.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-lungs skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Exercise Physiology</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Build advanced knowledge across scientific foundations and practical applications.</p>
+                  <p class="skill-card-desc">Understand how the body responds and adapts to training, from cardiorespiratory function to muscle metabolism, through foundation and advanced physiology courses.</p>
                 </div>
               </div>
             </div>
+
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-analytics.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-person-walking skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Sports Biomechanics</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Build advanced knowledge across scientific foundations and practical applications.</p>
+                  <p class="skill-card-desc">Analyse movement mechanics to improve technique, enhance efficiency, and reduce injury risk in athletes and active populations.</p>
                 </div>
               </div>
             </div>
+
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-fintech.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-dumbbell skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Strength &amp; Conditioning</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Build advanced knowledge across scientific foundations and practical applications.</p>
+                  <p class="skill-card-desc">Design periodised, athlete-focused strength and conditioning programmes grounded in scientific principles.</p>
                 </div>
               </div>
             </div>
@@ -721,31 +847,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="skills-slide skills-slide--three">
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-analytical.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-apple-whole skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Sports Nutrition</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Build advanced knowledge across scientific foundations and practical applications.</p>
+                  <p class="skill-card-desc">Apply evidence-based nutrition strategies to fuel performance, support recovery, and meet individual training goals.</p>
                 </div>
               </div>
             </div>
+
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-career.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-chart-line skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Performance Analysis</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Build advanced knowledge across scientific foundations and practical applications.</p>
+                  <p class="skill-card-desc">Use performance testing, load monitoring, motion analysis, and video analysis to guide training decisions.</p>
                 </div>
               </div>
             </div>
+
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-problem-solving.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-brain skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Sports Psychology</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Build advanced knowledge across scientific foundations and practical applications.</p>
+                  <p class="skill-card-desc">Build mental strength, focus, and resilience, and apply psychological principles to performance and athlete well-being.</p>
                 </div>
               </div>
             </div>
@@ -754,11 +882,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="skills-slide skills-slide--three">
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-ethics.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-microchip skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Sports Technology &amp; AI</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Address modern challenges in sports, fitness, healthcare, and wellness.</p>
+                  <p class="skill-card-desc">Work with wearables, data analytics, and AI tools to address modern challenges in sports, fitness, healthcare, and wellness.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap"><i class="fa-solid fa-flask skill-fa-icon" aria-hidden="true"></i></div>
+                <div class="skill-card-body">
+                  <h3 class="skill-card-title">Research &amp; Biostatistics</h3>
+                  <hr class="skill-card-line">
+                  <p class="skill-card-desc">Develop research design and biostatistics skills to read studies critically and make evidence-based decisions.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap"><i class="fa-solid fa-user-shield skill-fa-icon" aria-hidden="true"></i></div>
+                <div class="skill-card-body">
+                  <h3 class="skill-card-title">Training &amp; Injury Prevention</h3>
+                  <hr class="skill-card-line">
+                  <p class="skill-card-desc">Learn to screen risk, plan safe progressions, and apply prevention strategies across sport, fitness, and rehabilitation settings.</p>
                 </div>
               </div>
             </div>
@@ -777,29 +927,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="know-more-section section-global">
   <div class="container know-more-container">
     <div class="know-more-inner">
+      <div class="know-more-media">
+        <img src="assets/ess-course-structure.jpg" alt="Athlete on a treadmill with motion-capture markers while a sports scientist reviews biomechanics data in a lab" class="know-more-img">
+      </div>
       <div class="know-more-content">
         <h3 class="know-more-title">Course Structure</h3>
         <p class="know-more-lead">Explore the complete programme details</p>
         <p class="know-more-text">
           Download the brochure or visit the website to view the detailed curriculum, course structure, credits, learning outcomes, and faculty profiles.
         </p>
-        <a href="#" class="btn know-more-cta fw-bold npfWidgetButton npfWidget-86a9cceff1e5a85bf6f787455b7997df">DOWNLOAD BROCHURE</a>
-      </div>
-      <div class="know-more-media">
-        <img src="assets/know-more-brochure.png?v=2" alt="M.Sc. in Exercise and Sports Science brochure" class="know-more-img">
+        <a href="#" class="btn know-more-cta font-weight-bold npfWidgetButton npfWidget-86a9cceff1e5a85bf6f787455b7997df">DOWNLOAD BROCHURE</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="tuition-section section-global">
+<section class="tuition-section section-global" id="fees">
   <div class="tuition-panel tuition-panel--fees" id="tuitionPanel">
     <img class="tuition-panel-bg" id="tuitionPanelBg" src="assets/tuition-fees-bg.png?v=2" alt="" aria-hidden="true">
     <div class="tuition-panel-overlay" aria-hidden="true"></div>
     <div class="tuition-content">
       <div class="tuition-tabs" role="tablist" aria-label="Tuition information">
         <button type="button" class="tuition-tab active" role="tab" id="tuitionTabBtnFees" aria-selected="true" aria-controls="tuitionTabFees" data-tab="fees">
-          <span class="tuition-tab-text"><span class="tuition-tab-word">Fees</span> <span class="tuition-tab-word tuition-tab-word--gradient">Structure</span></span>
+          <span class="tuition-tab-text"><span class="tuition-tab-word">Tuition</span> <span class="tuition-tab-word tuition-tab-word--gradient">&amp; Financing</span></span>
         </button>
         <button type="button" class="tuition-tab" role="tab" id="tuitionTabBtnEligibility" aria-selected="false" aria-controls="tuitionTabEligibility" data-tab="eligibility">
           <span class="tuition-tab-text">Eligibility</span>
@@ -811,34 +961,107 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <table class="tuition-table">
             <thead>
               <tr>
-                <th>Fee Category</th>
+                <th>Fee</th>
                 <th>Amount</th>
                 <th>Due Date</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td data-label="Fee">Registration Amount</td>
+                <td data-label="Amount">INR 25,000</td>
+                <td data-label="Due Date">Upon acceptance of Offer Letter</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td data-label="Fee">Instalment 1</td>
+                <td data-label="Amount">INR 1,25,000</td>
+                <td data-label="Due Date">Before commencement of Year 1</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td data-label="Fee">Instalment 2</td>
+                <td data-label="Amount">INR 1,25,000</td>
+                <td data-label="Due Date">Before commencement of Year 2</td>
               </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+              <tr class="total">
+                <td data-label="Fee">Total Tuition Fee</td>
+                <td data-label="Amount">INR 2,75,000</td>
+                <td data-label="Due Date">&mdash;</td>
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <div class="payment-options-block">
+          <div class="payment-options-header">
+            <p class="payment-options-eyebrow">Flexible Financing</p>
+            <h3 class="payment-options-title">Tuition Fee &amp; Payment Options</h3>
+            <p class="payment-options-intro">We offer flexible payment options to help learners manage their programme fees conveniently. Available payment options may vary depending on the programme and applicant category.</p>
+          </div>
+
+          <section class="payment-audience" aria-labelledby="pay-indian-heading">
+            <div class="payment-audience-head">
+              <h4 class="payment-options-subtitle" id="pay-indian-heading">For Indian Nationals</h4>
+              <p class="payment-options-lead">You may choose from the following payment options:</p>
+            </div>
+            <div class="payment-cards">
+              <article class="payment-card">
+                <span class="payment-card-tag">Option 1</span>
+                <h5 class="payment-option-name">Full Payment</h5>
+                <p class="payment-card-highlight">Pay remaining fee in one go</p>
+                <ul>
+                  <li><strong>Registration Fee:</strong> Pay the applicable registration fee at the time of registration.</li>
+                  <li><strong>Remaining Programme Fee:</strong> Pay the complete remaining programme fee within 10 days from the date of registration.</li>
+                </ul>
+              </article>
+              <article class="payment-card payment-card--jodo">
+                <span class="payment-card-tag">Option 2</span>
+                <h5 class="payment-option-name">Jodo Flex</h5>
+                <p class="payment-card-highlight">3, 6 or 9 instalments</p>
+                <ul>
+                  <li><strong>Registration Fee:</strong> Pay the applicable registration fee at the time of registration.</li>
+                  <li><strong>Remaining Programme Fee:</strong> Pay the remaining programme fee through a structured instalment plan of 3, 6, or 9 instalments, as per the applicable payment schedule and terms.</li>
+                </ul>
+              </article>
+              <article class="payment-card payment-card--jodo payment-card--featured">
+                <span class="payment-card-tag">Option 3</span>
+                <span class="payment-card-badge">Popular</span>
+                <h5 class="payment-option-name">Jodo EMI &ndash; 12 Months</h5>
+                <p class="payment-card-highlight">Monthly EMI over 12 months</p>
+                <ul>
+                  <li><strong>Registration Fee:</strong> Pay the applicable registration fee at the time of registration.</li>
+                  <li><strong>Remaining Programme Fee:</strong> Pay the remaining programme fee in monthly instalments over 12 months, subject to eligibility, approval, and applicable terms and conditions.</li>
+                </ul>
+              </article>
+            </div>
+            <p class="payment-options-note"><strong>Important Note:</strong> Indian citizens, including Non-Resident Indians (NRIs), who have valid Indian Aadhaar and PAN details may apply using the payment options available for Indian Nationals, subject to applicable eligibility requirements and verification.</p>
+          </section>
+
+          <section class="payment-audience" aria-labelledby="pay-foreign-heading">
+            <div class="payment-audience-head">
+              <h4 class="payment-options-subtitle" id="pay-foreign-heading">For Foreign Nationals</h4>
+              <p class="payment-options-lead">You may choose from the following payment options:</p>
+            </div>
+            <div class="payment-cards payment-cards--two">
+              <article class="payment-card">
+                <span class="payment-card-tag">Option 1</span>
+                <h5 class="payment-option-name">Full Payment</h5>
+                <p class="payment-card-highlight">Pay remaining fee in one go</p>
+                <ul>
+                  <li><strong>Registration Fee:</strong> Pay the applicable registration fee at the time of registration.</li>
+                  <li><strong>Remaining Programme Fee:</strong> Pay the complete programme fee within 10 days from the date of registration.</li>
+                </ul>
+              </article>
+              <article class="payment-card">
+                <span class="payment-card-tag">Option 2</span>
+                <h5 class="payment-option-name">Two-Instalment Payment Plan</h5>
+                <p class="payment-card-highlight">2 scheduled instalments</p>
+                <ul>
+                  <li><strong>Registration Fee:</strong> Pay the applicable registration fee at the time of registration.</li>
+                  <li><strong>Remaining Programme Fee:</strong> Pay the programme fee in two instalments, as per the applicable fee schedule mentioned for the programme.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
         </div>
       </div>
 
@@ -848,11 +1071,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3 class="tuition-eligibility-heading">Eligibility:</h3>
             <div class="tuition-eligibility-block">
               <p class="tuition-eligibility-label">&bull; Academic Requirement</p>
-              <p class="tuition-eligibility-desc"><em>Applicants should have a Bachelor’s degree in Medical Sciences, Physiotherapy, or Allied Health Sciences to apply for the M.Sc. in Exercise &amp; Sports Science programme.</em></p>
+              <p class="tuition-eligibility-desc">Applicants should have a Bachelor&rsquo;s degree in Medical Sciences, Physiotherapy, or Allied Health Sciences to apply for the M.Sc. in Exercise &amp; Sports Science programme.</p>
             </div>
             <div class="tuition-eligibility-block">
               <p class="tuition-eligibility-label">&bull; Ideal Backgrounds Include:</p>
-              <p class="tuition-eligibility-desc"><em>Exercise &amp; Sports Science, Physical Education, Physiotherapy, Allied Health Sciences, and related health and wellness disciplines.</em></p>
+              <p class="tuition-eligibility-desc">Exercise &amp; Sports Science, Physical Education, Physiotherapy, Allied Health Sciences, and related health and wellness disciplines.</p>
               <p class="tuition-eligibility-highlight">Minimum 60% in undergraduate degree</p>
             </div>
           </div>
@@ -871,6 +1094,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="tuition-step">
               <p class="tuition-step-title">&bull; Step 3: Academic Eligibility</p>
               <p class="tuition-step-desc">Minimum 60% in undergraduate degree.</p>
+            </div>
+            <div class="tuition-step">
+              <p class="tuition-step-title">&bull; Selection Criteria</p>
+              <p class="tuition-step-desc">Applicants who have secured less than 50% in Class XII or in their three-year technical diploma will be required to appear for the JSAT (online proctored entrance test).</p>
             </div>
           </div>
         </div>
@@ -936,58 +1163,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="programme-for-grid">
       <article class="programme-for-card">
         <div class="programme-for-icon" aria-hidden="true">
-          <img src="assets/programme-for-icon-1.png" alt="" class="programme-for-icon-img">
+          <i class="fa-solid fa-graduation-cap programme-for-fa-icon"></i>
         </div>
         <h3 class="programme-for-card-title">Exercise &amp; Sports Science graduates</h3>
-        <p class="programme-for-card-text">Advance in sports, fitness, health, and performance domains.</p>
+        <p class="programme-for-card-text">Deepen your undergraduate foundation with advanced physiology, biomechanics, and performance analysis, and step into specialist roles in sport and health.</p>
       </article>
 
       <article class="programme-for-card">
         <div class="programme-for-icon" aria-hidden="true">
-          <img src="assets/programme-for-icon-2.png" alt="" class="programme-for-icon-img">
+          <i class="fa-solid fa-person-running programme-for-fa-icon"></i>
         </div>
         <h3 class="programme-for-card-title">Physical Education professionals</h3>
-        <p class="programme-for-card-text">Advance in sports, fitness, health, and performance domains.</p>
+        <p class="programme-for-card-text">Move from instruction to evidence-based practice by adding research skills, athlete assessment, and scientific programme design to your teaching.</p>
       </article>
 
       <article class="programme-for-card">
         <div class="programme-for-icon" aria-hidden="true">
-          <img src="assets/programme-for-icon-3.png" alt="" class="programme-for-icon-img">
+          <i class="fa-solid fa-user-doctor programme-for-fa-icon"></i>
         </div>
         <h3 class="programme-for-card-title">Physiotherapy and allied health graduates</h3>
-        <p class="programme-for-card-text">Advance in sports, fitness, health, and performance domains.</p>
+        <p class="programme-for-card-text">Extend your clinical training into performance, conditioning, and return-to-performance work with athletes and active populations.</p>
       </article>
 
       <article class="programme-for-card">
         <div class="programme-for-icon" aria-hidden="true">
-          <img src="assets/programme-for-icon-4.png" alt="" class="programme-for-icon-img">
+          <i class="fa-solid fa-stopwatch programme-for-fa-icon"></i>
         </div>
         <h3 class="programme-for-card-title">Fitness trainers</h3>
-        <p class="programme-for-card-text">Advance in sports, fitness, health, and performance domains.</p>
+        <p class="programme-for-card-text">Back your hands-on experience with exercise science so you can design safer, smarter, and more effective programmes for your clients.</p>
       </article>
 
       <article class="programme-for-card">
         <div class="programme-for-icon" aria-hidden="true">
-          <img src="assets/programme-for-icon-5.png" alt="" class="programme-for-icon-img">
+          <i class="fa-solid fa-weight-hanging programme-for-fa-icon"></i>
         </div>
         <h3 class="programme-for-card-title">Strength &amp; conditioning professionals</h3>
-        <p class="programme-for-card-text">Advance in sports, fitness, health, and performance domains.</p>
+        <p class="programme-for-card-text">Sharpen periodisation, load monitoring, and testing skills, and make training decisions backed by data and research.</p>
       </article>
 
       <article class="programme-for-card">
         <div class="programme-for-icon" aria-hidden="true">
-          <img src="assets/programme-for-icon-1.png" alt="" class="programme-for-icon-img">
+          <i class="fa-solid fa-clipboard-user programme-for-fa-icon"></i>
         </div>
         <h3 class="programme-for-card-title">Sports coaches</h3>
-        <p class="programme-for-card-text">Advance in sports, fitness, health, and performance domains.</p>
+        <p class="programme-for-card-text">Understand the science behind movement, recovery, nutrition, and mental performance to get more out of every athlete and every season.</p>
       </article>
 
       <article class="programme-for-card">
         <div class="programme-for-icon" aria-hidden="true">
-          <img src="assets/programme-for-icon-2.png" alt="" class="programme-for-icon-img">
+          <i class="fa-solid fa-microscope programme-for-fa-icon"></i>
         </div>
         <h3 class="programme-for-card-title">Sports science researchers</h3>
-        <p class="programme-for-card-text">Advance in sports, fitness, health, and performance domains.</p>
+        <p class="programme-for-card-text">Build a strong base in research design, biostatistics, and applied case studies, and prepare for academia, PhD pathways, or research roles.</p>
       </article>
     </div>
   </div>
@@ -999,12 +1226,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <img class="career-pathways-bg" src="assets/career-pathways-bg.png?v=2" alt="" aria-hidden="true">
       <div class="career-pathways-overlay" aria-hidden="true"></div>
       <div class="career-pathways-inner">
-        <h2 class="career-pathways-title">Career<br>Pathways</h2>
+        <h2 class="career-pathways-title">Career <br>Pathways</h2>
 
         <div class="career-pathways-cards">
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-1.png" alt="" aria-hidden="true">
+              <i class="fa-solid fa-flask career-fa-icon" aria-hidden="true"></i>
             </div>
             <h3 class="career-pathway-card-title">Exercise Scientist</h3>
             <p class="career-pathway-card-text">Design and evaluate exercise interventions using scientific principles.</p>
@@ -1012,7 +1239,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-2.png" alt="" aria-hidden="true">
+              <i class="fa-solid fa-dumbbell career-fa-icon" aria-hidden="true"></i>
             </div>
             <h3 class="career-pathway-card-title">Strength &amp; Conditioning Coach</h3>
             <p class="career-pathway-card-text">Develop athlete-focused training and performance programmes.</p>
@@ -1020,7 +1247,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-4.png" alt="" aria-hidden="true">
+              <i class="fa-solid fa-chart-line career-fa-icon" aria-hidden="true"></i>
             </div>
             <h3 class="career-pathway-card-title">Sports Performance Analyst</h3>
             <p class="career-pathway-card-text">Use performance data to support training decisions.</p>
@@ -1028,7 +1255,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-3.png" alt="" aria-hidden="true">
+              <i class="fa-solid fa-user-tie career-fa-icon" aria-hidden="true"></i>
             </div>
             <h3 class="career-pathway-card-title">Sports Science Consultant</h3>
             <p class="career-pathway-card-text">Apply scientific knowledge across sports and wellness environments.</p>
@@ -1036,10 +1263,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-5.png" alt="" aria-hidden="true">
+              <i class="fa-solid fa-heart-pulse career-fa-icon" aria-hidden="true"></i>
             </div>
             <h3 class="career-pathway-card-title">Clinical Exercise Specialist</h3>
             <p class="career-pathway-card-text">Support health-focused exercise practices.</p>
+          </article>
+
+          <article class="career-pathway-card">
+            <div class="career-pathway-icon">
+              <i class="fa-solid fa-bone career-fa-icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="career-pathway-card-title">Sports Biomechanist</h3>
+            <p class="career-pathway-card-text">Analyse movement mechanics to enhance performance and reduce injury risk.</p>
           </article>
         </div>
       </div>
@@ -1047,6 +1282,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- FACULTY SECTION DEACTIVATED until full faculty details are available. To re-enable, remove this comment wrapper (and the .faculty-section { display: none } rule at the end of css/style.css).
 <section class="faculty-section section-global">
   <div class="container faculty-container">
     <div class="faculty-header">
@@ -1058,8 +1294,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="faculty-slider-wrap">
-      <button class="faculty-arrow prev" type="button" aria-label="Previous faculty"><i class="bi bi-chevron-left"></i></button>
-      <button class="faculty-arrow next" type="button" aria-label="Next faculty"><i class="bi bi-chevron-right"></i></button>
+      <button class="faculty-arrow prev" type="button" aria-label="Previous faculty">&#10094;</button>
+      <button class="faculty-arrow next" type="button" aria-label="Next faculty">&#10095;</button>
 
       <div class="faculty-track" id="facultyTrack">
         <article class="faculty-member">
@@ -1095,31 +1331,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+-->
 
 <section class="recognition-section section-global">
   <img class="recognition-bg" src="assets/recog-campus-bg.png" alt="" aria-hidden="true">
   <div class="recognition-container">
     <h2 class="recognition-title">Recognitions and Accreditations</h2>
-
-    <div class="recognition-grid" id="recognitionSlider">
+    <div class="recognition-grid" id="recognitionGrid">
       <div class="rec-card rec-card-small">
-        <img src="assets/recog-1-qs-top150.png" alt="TOP 150 Under 50 Globally - QS Young University Rankings 2022">
+        <img src="assets/recog-1-qs-top150.png?v=feedback-1011" alt="Top 150 Young Universities Worldwide &ndash; QS Young University Rankings">
       </div>
-
       <div class="rec-card rec-card-small">
-        <img src="assets/recog-2-eminence.png" alt="Institution of Eminence - Ministry of Education, Government of India">
+        <img src="assets/recog-2-eminence.png" alt="Institution of Eminence (IoE) &ndash; Ministry of Education, Government of India">
       </div>
-
       <div class="rec-card rec-card-main">
-        <img src="assets/recog-3-global-rankings.png" alt="JGU Makes History in Global Rankings - QS World University Rankings by Subject">
+        <img src="assets/recog-3-global-rankings.png" alt="JGU Makes History in Global Rankings &ndash; India's No. 1 Ranked University, QS World University Rankings by Subject 2026">
       </div>
-
       <div class="rec-card rec-card-small">
-        <img src="assets/recog-4-qs-no1.png" alt="Ranked No. 1 Private University in India - QS World University Rankings (2021 - 2023)">
+        <img src="assets/recog-4-qs-no1.png?v=feedback-1011" alt="#1 Private University in India &ndash; QS World University Rankings 2026">
       </div>
-
       <div class="rec-card rec-card-small">
-        <img src="assets/recog-5-online-learning.png" alt="Ranked No. 1 Globally for Online Learning - THE 2024">
+        <img src="assets/recog-5-online-learning.png?v=feedback-1011" alt="Ranked No. 1 Globally for Online Learning (THE Rankings 2024)">
       </div>
     </div>
     <div class="recognition-dots" id="recognitionDots" role="tablist" aria-label="Recognition slides"></div>
@@ -1136,26 +1368,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="accordion faq-accordion" id="faqLeft">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faq1">
                   Is this a fully online programme?
                 </button>
               </h2>
-              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqLeft">
+              <div id="faq1" class="collapse show" data-parent="#faqLeft">
                 <div class="accordion-body">
-                  The programme follows a hybrid learning model combining asynchronous online learning with on-campus components.
+                  The programme is delivered online through asynchronous learning, so you can study on your own schedule. We also offer an optional structured campus visit of up to one week in January each year, where you get hands-on training and time with our faculty.
                 </div>
               </div>
             </div>
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faq2">
                   What is the duration?
                 </button>
               </h2>
-              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+              <div id="faq2" class="collapse" data-parent="#faqLeft">
                 <div class="accordion-body">
-                  The programme duration is one year with four terms.
+                  The programme runs for one year across four terms, with a total of 60 credits.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faq4">
+                  Is campus attendance mandatory?
+                </button>
+              </h2>
+              <div id="faq4" class="collapse" data-parent="#faqLeft">
+                <div class="accordion-body">
+                  No. Campus visits are optional. Boarding and lodging costs for the visit are additional.
                 </div>
               </div>
             </div>
@@ -1166,13 +1411,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="accordion faq-accordion" id="faqRight">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faq3">
                   Will I receive a recognised degree?
                 </button>
               </h2>
-              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+              <div id="faq3" class="collapse" data-parent="#faqRight">
                 <div class="accordion-body">
-                  The programme document states that the degree has the same value as an offline degree and is recognised as a full-time degree.
+                  Yes. You will receive a JGU degree that carries the same academic value as our on-campus degree, and it is recognised as a full-time degree, not a distance-learning qualification. We provide a hard-copy degree certificate, and the online mode of delivery is mentioned on its reverse.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faq5">
+                  Who can apply for this programme?
+                </button>
+              </h2>
+              <div id="faq5" class="collapse" data-parent="#faqRight">
+                <div class="accordion-body">
+                  We welcome applicants with a Bachelor&rsquo;s degree in Medical Sciences, Physiotherapy, or Allied Health Sciences and a minimum of 60% in their undergraduate degree. Admission includes a Statement of Purpose and an interview.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faq6">
+                  What is the programme fee?
+                </button>
+              </h2>
+              <div id="faq6" class="collapse" data-parent="#faqRight">
+                <div class="accordion-body">
+                  The total tuition fee is INR 2,75,000, payable as a registration amount and two instalments. We also offer Full Payment, Jodo Flex, and Jodo EMI options for eligible applicants.
                 </div>
               </div>
             </div>
@@ -1187,462 +1458,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="enquire-card">
       <div class="enquire-form-panel">
         <div class="enquire-npf-scroll">
-          <div class="npf_wgts enquire-npf-widget" data-height="520px" data-w="86a9cceff1e5a85bf6f787455b7997df"></div>
+          <div class="npf_wgts" data-height="400px" data-w="86a9cceff1e5a85bf6f787455b7997df"></div>
         </div>
       </div>
       <div class="enquire-info-panel">
         <div class="info-section">
           <h2>Let's connect and shape your path at JGU!</h2>
           <p class="info-text">Reach out to know more about programmes, admissions, and opportunities.</p>
+          <ul class="enquire-info-list">
+            <li>Admissions help and eligibility guidance</li>
+            <li>Programme details, curriculum, and fees</li>
+            <li>Payment options, including Jodo Flex and Jodo EMI</li>
+            <li>Optional campus visit and lab facility details</li>
+            <li>Request a callback from our team</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    
-    
-
-    
-    
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const track = document.getElementById('facultyTrack');
-  const prevBtn = document.querySelector('.faculty-arrow.prev');
-  const nextBtn = document.querySelector('.faculty-arrow.next');
-
-  if (!track || !prevBtn || !nextBtn) return;
-
-  function getScrollAmount() {
-    const member = track.querySelector('.faculty-member');
-    if (!member) return 256;
-    const styles = getComputedStyle(track);
-    const gap = parseFloat(styles.columnGap || styles.gap) || 24;
-    return member.offsetWidth + gap;
-  }
-
-  function updateFacultyArrows() {
-    const maxScroll = track.scrollWidth - track.clientWidth;
-    prevBtn.disabled = track.scrollLeft <= 4;
-    nextBtn.disabled = track.scrollLeft >= maxScroll - 4 || maxScroll <= 0;
-  }
-
-  function scrollFaculty(direction) {
-    track.scrollBy({ left: direction * getScrollAmount(), behavior: 'smooth' });
-  }
-
-  prevBtn.addEventListener('click', function () {
-    scrollFaculty(-1);
-  });
-
-  nextBtn.addEventListener('click', function () {
-    scrollFaculty(1);
-  });
-
-  track.addEventListener('scroll', updateFacultyArrows, { passive: true });
-  window.addEventListener('resize', function () {
-    track.scrollTo({ left: Math.round(track.scrollLeft / getScrollAmount()) * getScrollAmount() });
-    updateFacultyArrows();
-  });
-  window.addEventListener('load', updateFacultyArrows);
-  updateFacultyArrows();
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const viewport = document.getElementById('recognitionSlider');
-  const dotsContainer = document.getElementById('recognitionDots');
-  if (!viewport || !dotsContainer) return;
-
-  const cards = Array.from(viewport.querySelectorAll('.rec-card'));
-  let currentIndex = 0;
-
-  function isMobileRecognition() {
-    return window.matchMedia('(max-width: 767px)').matches;
-  }
-
-  function buildDots() {
-    dotsContainer.innerHTML = '';
-    if (!isMobileRecognition() || cards.length <= 1) {
-      dotsContainer.hidden = true;
-      return;
-    }
-    dotsContainer.hidden = false;
-    cards.forEach(function (_card, i) {
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'recognition-dot' + (i === currentIndex ? ' active' : '');
-      btn.setAttribute('aria-label', 'Recognition ' + (i + 1));
-      btn.setAttribute('data-index', String(i));
-      btn.addEventListener('click', function () {
-        goTo(parseInt(this.getAttribute('data-index'), 10));
-      });
-      dotsContainer.appendChild(btn);
-    });
-  }
-
-  function updateDots() {
-    dotsContainer.querySelectorAll('.recognition-dot').forEach(function (dot, i) {
-      dot.classList.toggle('active', i === currentIndex);
-    });
-  }
-
-  function goTo(index) {
-    if (!cards.length) return;
-    currentIndex = Math.max(0, Math.min(index, cards.length - 1));
-    var target = cards[currentIndex];
-    viewport.scrollTo({
-      left: target.offsetLeft - viewport.offsetLeft,
-      behavior: 'smooth'
-    });
-    updateDots();
-  }
-
-  function syncFromScroll() {
-    if (!isMobileRecognition()) return;
-    var scrollLeft = viewport.scrollLeft;
-    var closest = 0;
-    var smallest = Infinity;
-    cards.forEach(function (card, index) {
-      var left = card.offsetLeft - viewport.offsetLeft;
-      var diff = Math.abs(left - scrollLeft);
-      if (diff < smallest) {
-        smallest = diff;
-        closest = index;
-      }
-    });
-    currentIndex = closest;
-    updateDots();
-  }
-
-  viewport.addEventListener('scroll', syncFromScroll, { passive: true });
-  window.addEventListener('resize', function () {
-    buildDots();
-    if (isMobileRecognition()) goTo(currentIndex);
-  });
-
-  buildDots();
-  if (isMobileRecognition()) goTo(0);
-});
-</script>
-
- <script>
-        function showTab(tabId) {
-            // Hide all tab contents
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => {
-                content.classList.remove('active');
-            });
-
-            // Remove active class from all buttons
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            // Show selected tab
-            document.getElementById(tabId).classList.add('active');
-
-            // Add active class to clicked button
-            event.target.classList.add('active');
-        }
-    </script>
-
-  <script>
-        (function () {
-        const track = document.getElementById('carouselTrack');
-        const wrapper = document.getElementById('carouselWrapper');
-        const nextBtn = document.getElementById('nextBtn');
-
-        if (!track || !wrapper || !nextBtn) return;
-
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
-
-        if (!totalSlides) return;
-
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        wrapper.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-
-        wrapper.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        }, { passive: true });
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    nextSlide();
-                } else {
-                    prevSlide();
-                }
-            }
-        }
-
-        function updateCarousel() {
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
-            if (currentSlide === totalSlides - 1) {
-                nextBtn.disabled = true;
-            } else {
-                nextBtn.disabled = false;
-            }
-        }
-
-        function nextSlide() {
-            if (currentSlide < totalSlides - 1) {
-                currentSlide++;
-                updateCarousel();
-            }
-        }
-
-        function prevSlide() {
-            if (currentSlide > 0) {
-                currentSlide--;
-                updateCarousel();
-            }
-        }
-
-        updateCarousel();
-        })();
-    </script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const viewport = document.getElementById('featuresSlider');
-  const prevBtn = document.querySelector('.features-arrow.prev');
-  const nextBtn = document.querySelector('.features-arrow.next');
-  const dotsContainer = document.getElementById('featuresDots');
-
-  if (!viewport || !prevBtn || !nextBtn) return;
-
-  let currentIndex = 0;
-
-  function isMobileFeatures() {
-    return window.matchMedia('(max-width: 767px)').matches;
-  }
-
-  function getTargets() {
-    if (isMobileFeatures()) {
-      return Array.from(viewport.querySelectorAll('.feature-card'));
-    }
-    return Array.from(viewport.querySelectorAll('.features-slide'));
-  }
-
-  function buildDots(count) {
-    if (!dotsContainer) return;
-    dotsContainer.innerHTML = '';
-    if (!isMobileFeatures() || count <= 1) {
-      dotsContainer.hidden = true;
-      return;
-    }
-    dotsContainer.hidden = false;
-    for (var i = 0; i < count; i++) {
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'features-dot' + (i === currentIndex ? ' active' : '');
-      btn.setAttribute('aria-label', 'Feature ' + (i + 1));
-      btn.setAttribute('data-index', String(i));
-      btn.addEventListener('click', function () {
-        goToSlide(parseInt(this.getAttribute('data-index'), 10));
-      });
-      dotsContainer.appendChild(btn);
-    }
-  }
-
-  function updateDots() {
-    if (!dotsContainer) return;
-    var dots = dotsContainer.querySelectorAll('.features-dot');
-    dots.forEach(function (dot, i) {
-      dot.classList.toggle('active', i === currentIndex);
-    });
-  }
-
-  function goToSlide(index) {
-    var targets = getTargets();
-    if (!targets.length) return;
-
-    currentIndex = Math.max(0, Math.min(index, targets.length - 1));
-    var target = targets[currentIndex];
-
-    if (target) {
-      viewport.scrollTo({
-        left: target.offsetLeft - viewport.offsetLeft,
-        behavior: 'smooth'
-      });
-    }
-
-    updateArrows(targets.length);
-    updateDots();
-  }
-
-  function updateArrows(total) {
-    prevBtn.disabled = currentIndex <= 0;
-    nextBtn.disabled = currentIndex >= total - 1;
-  }
-
-  function syncIndexFromScroll() {
-    var targets = getTargets();
-    var scrollLeft = viewport.scrollLeft;
-    var closestIndex = 0;
-    var smallestDiff = Infinity;
-
-    targets.forEach(function (slide, index) {
-      var left = slide.offsetLeft - viewport.offsetLeft;
-      var diff = Math.abs(left - scrollLeft);
-      if (diff < smallestDiff) {
-        smallestDiff = diff;
-        closestIndex = index;
-      }
-    });
-
-    currentIndex = closestIndex;
-    updateArrows(targets.length);
-    updateDots();
-  }
-
-  function refresh() {
-    var targets = getTargets();
-    currentIndex = Math.min(currentIndex, Math.max(0, targets.length - 1));
-    buildDots(targets.length);
-    goToSlide(currentIndex);
-  }
-
-  prevBtn.addEventListener('click', function () {
-    goToSlide(currentIndex - 1);
-  });
-
-  nextBtn.addEventListener('click', function () {
-    goToSlide(currentIndex + 1);
-  });
-
-  viewport.addEventListener('scroll', syncIndexFromScroll, { passive: true });
-  window.addEventListener('resize', refresh);
-
-  refresh();
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const panel = document.getElementById('tuitionPanel');
-  const panelBg = document.getElementById('tuitionPanelBg');
-  const tabButtons = document.querySelectorAll('.tuition-tab');
-  const tabPanels = document.querySelectorAll('.tuition-tab-panel');
-
-  if (!panel || !tabButtons.length || !tabPanels.length) return;
-
-  function switchTuitionTab(tabName) {
-    const isFees = tabName === 'fees';
-
-    panel.classList.toggle('tuition-panel--fees', isFees);
-    panel.classList.toggle('tuition-panel--eligibility', !isFees);
-
-    if (panelBg) {
-      panelBg.src = isFees ? 'assets/tuition-fees-bg.png?v=2' : 'assets/tuition-eligibility-bg.png?v=2';
-    }
-
-    tabButtons.forEach(function (button) {
-      const isActive = button.getAttribute('data-tab') === tabName;
-      button.classList.toggle('active', isActive);
-      button.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-
-    tabPanels.forEach(function (tabPanel) {
-      const isActive = tabPanel.id === (isFees ? 'tuitionTabFees' : 'tuitionTabEligibility');
-      tabPanel.classList.toggle('active', isActive);
-      tabPanel.hidden = !isActive;
-    });
-  }
-
-  tabButtons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      switchTuitionTab(button.getAttribute('data-tab'));
-    });
-  });
-
-  switchTuitionTab('fees');
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const viewport = document.querySelector('.skills-carousel-viewport');
-  const track = document.getElementById('skillsCarouselTrack');
-  const dotsContainer = document.getElementById('skillsDots');
-
-  if (!viewport || !track || !dotsContainer) return;
-
-  const slides = Array.from(track.querySelectorAll('.skills-slide'));
-  const dots = dotsContainer.querySelectorAll('.skills-dot');
-  let currentIndex = 0;
-
-  function getSlideWidth() {
-    if (slides[0]) {
-      return slides[0].getBoundingClientRect().width;
-    }
-    return viewport.clientWidth;
-  }
-
-  function goToSlide(index) {
-    currentIndex = Math.max(0, Math.min(index, slides.length - 1));
-    const offset = currentIndex * getSlideWidth();
-    track.style.transform = 'translate3d(-' + offset + 'px, 0, 0)';
-
-    dots.forEach(function (dot, i) {
-      const isActive = i === currentIndex;
-      dot.classList.toggle('active', isActive);
-      dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-  }
-
-  dots.forEach(function (dot) {
-    dot.addEventListener('click', function () {
-      goToSlide(parseInt(dot.getAttribute('data-index'), 10));
-    });
-  });
-
-  window.addEventListener('resize', function () {
-    goToSlide(currentIndex);
-  });
-
-  goToSlide(0);
-});
-</script>
-
-<script>
-(function () {
-  var applyBtn = document.getElementById('heroApplyNowBtn');
-  var npfTrigger = document.querySelector('.hero-npf-trigger.npfWidget-86a9cceff1e5a85bf6f787455b7997df');
-  if (!applyBtn) return;
-
-  applyBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    if (npfTrigger) {
-      npfTrigger.click();
-      return;
-    }
-    var fallback = document.querySelector('.npfWidgetButton.npfWidget-86a9cceff1e5a85bf6f787455b7997df');
-    if (fallback) fallback.click();
-  });
-})();
-</script>
+<!-- JS: jQuery, Bootstrap 4, page interactions, NPF widgets -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js?v=feedback-1011"></script>
 
 <script type="text/javascript">var s=document.createElement("script"); s.type="text/javascript"; s.async=true; s.src="https://widgets.in8.nopaperforms.com/emwgts.js"; document.body.appendChild(s);</script>
 
@@ -1671,7 +1509,7 @@ let npfW86a9cceff1e5a85bf6f787455b7997df = new NpfWidgetsInit({
 
  
 <footer class="site-footer">
-  <p class="text-center fw-bold">
+  <p class="text-center font-weight-bold">
     &copy; 2026 O.P. Jindal Global University. All Rights Reserved
   </p>
 </footer>
