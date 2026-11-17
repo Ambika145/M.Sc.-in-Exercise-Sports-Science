@@ -7174,7 +7174,7 @@ iframe {
   }
 }
 
-/* Faculty: one continuous gradient across the full title; section deactivated until faculty details exist */
+/* Faculty: one continuous gradient across the full title; section enabled (single-faculty slider, centred) */
 .faculty-title {
   background: linear-gradient(90deg, #1a237e 0%, #7b1fa2 55%, #00acc1 100%);
   -webkit-background-clip: text;
@@ -7190,8 +7190,52 @@ iframe {
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
-.faculty-section {
-  display: none !important;
+.faculty-track:has(.faculty-member:only-child) {
+  justify-content: center;
+}
+.faculty-member:only-child {
+  flex: 0 0 min(300px, 100%);
+  width: min(300px, 100%);
+  min-width: min(300px, 100%);
+  max-width: 340px;
+}
+.faculty-member:only-child .faculty-photo-frame {
+  width: min(260px, 100%);
+}
+.faculty-member:only-child .faculty-photo {
+  border-radius: 20px;
+  box-shadow: 0 10px 26px rgba(26, 35, 126, 0.16);
+}
+.faculty-member:only-child .faculty-role {
+  max-width: 100%;
+}
+
+/* Course Structure image: capped height like DigGov / MADH (360px desktop, 280px mobile) */
+.know-more-media {
+  max-width: 560px;
+  margin-inline: auto;
+}
+.know-more-img {
+  height: clamp(240px, 32vw, 360px);
+  max-height: 360px;
+  object-fit: cover;
+  object-position: center 35%;
+}
+@media screen and (max-width: 767px) {
+  .know-more-img {
+    height: clamp(200px, 48vw, 280px);
+    max-height: 280px;
+  }
+}
+
+/* Learn More button: text centred, arrow points right */
+.programme-learn-more-btn {
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+}
+.programme-learn-more-text {
+  flex: 0 1 auto;
 }
 
 /* Enquire Now: filled info panel */
@@ -7240,6 +7284,98 @@ iframe {
 }
 @media screen and (max-width: 991px) {
   .enquire-info-list li { font-size: 0.92rem; }
+}
+
+/* Enquire Now: eyebrow, programme-at-a-glance stats and deadline (DigGov / MADH pattern) */
+.enquire-info-panel {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 8%, rgba(0, 172, 193, 0.28) 0%, rgba(0, 172, 193, 0) 45%),
+    radial-gradient(circle at 10% 100%, rgba(123, 31, 162, 0.35) 0%, rgba(123, 31, 162, 0) 50%),
+    #0f1654;
+}
+.enquire-info-panel .info-section {
+  position: relative;
+  z-index: 1;
+  max-width: 30rem;
+}
+.enquire-info-eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7ee3f0;
+}
+.enquire-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.enquire-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.8rem 1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+.enquire-stat strong {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #fff;
+}
+.enquire-stat span {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+.enquire-deadline {
+  margin: 1.1rem 0 0;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(251, 191, 36, 0.14);
+  border: 1px solid rgba(251, 191, 36, 0.45);
+  color: #fbbf24;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Who is this programme for: 7 tiles laid out 4 + 3 with the last row centred */
+@media screen and (min-width: 1200px) {
+  .programme-for-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    row-gap: 56px;
+  }
+  .programme-for-grid > .programme-for-card {
+    grid-column: span 2;
+  }
+  .programme-for-grid > .programme-for-card:nth-child(5) {
+    grid-column: 2 / span 2;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .programme-for-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    row-gap: 56px !important;
+    column-gap: 20px !important;
+    max-width: 760px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .programme-for-grid > .programme-for-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - 10px);
+    justify-self: center;
+  }
 }
 
 /* Who is this programme for: Font Awesome icons (unique per tile) */
